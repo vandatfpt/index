@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>DAT KOY TRADING</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+function isChrome() {
+  const ua = navigator.userAgent;
+  return /Chrome/.test(ua) && !/Edg|OPR|FBAN|FBAV|Instagram|Zalo/.test(ua);
+}
+function showNotification() {
+  if (!isChrome()) {
+    const link = window.location.href;
+    const overlay = document.createElement("div");
+    overlay.style.position = "fixed";
+    overlay.style.top = "0";
+    overlay.style.left = "0";
+    overlay.style.width = "100vw";
+    overlay.style.height = "100vh";
+    overlay.style.background = "rgba(0,0,0,0.7)";
+    overlay.style.display = "flex";
+    overlay.style.flexDirection = "column";
+    overlay.style.alignItems = "center";
+    overlay.style.justifyContent = "center";
+    overlay.style.zIndex = "10000";
+
+    const box = document.createElement("div");
+    box.style.background = "#ffffff";
+    box.style.color = "#333";
+    box.style.padding = "20px";
+    box.style.borderRadius = "12px";
+    box.style.textAlign = "center";
+    box.style.width = "90%";
+    box.style.maxWidth = "400px";
+    box.innerHTML = `
+      <h2 style="color:#007BFF">⚠️ Mở bằng Chrome</h2>
+      <p>Để có trải nghiệm tốt nhất, vui lòng mở link bằng trình duyệt <strong>Google Chrome</strong>.</p>
+    `;
+
+    const copyBtn = document.createElement("button");
+    copyBtn.textContent = "📋 Copy Link";
+    copyBtn.style.padding = "12px 20px";
+    copyBtn.style.margin = "5px";
+    copyBtn.style.fontSize = "16px";
+    copyBtn.style.borderRadius = "8px";
+    copyBtn.style.border = "none";
+    copyBtn.style.cursor = "pointer";
+    copyBtn.style.background = "#007BFF";
+    copyBtn.style.color = "#fff";
+    copyBtn.addEventListener("click", function() {
+      navigator.clipboard.writeText(link).then(() => {
+        alert("✅ Đã copy link! Hãy dán vào trình duyệt Chrome.");
+      });
+    });
+    box.appendChild(copyBtn);
+
+    const openBtn = document.createElement("a");
+    openBtn.textContent = "🌐 Mở bằng Chrome";
+    openBtn.href = "https://datkoy.com"; 
+    openBtn.style.display = "inline-block";
+    openBtn.style.padding = "12px 20px";
+    openBtn.style.margin = "5px";
+    openBtn.style.fontSize = "16px";
+    openBtn.style.borderRadius = "8px";
+    openBtn.style.border = "none";
+    openBtn.style.cursor = "pointer";
+    openBtn.style.background = "#28a745";
+    openBtn.style.color = "#fff";
+    openBtn.style.textDecoration = "none";
+
+    box.appendChild(openBtn);
+    overlay.appendChild(box);
+    document.body.appendChild(overlay);
+  }
+}
+window.onload = showNotification;
+</script>
+</head>
+<body class="bg-gradient-to-b from-green-300 to-green-500 flex flex-col items-center p-4 font-sans">
+<!-- Avatar & Tiêu đề -->
+<div class="flex flex-col items-center mt-5">
+  <img src="avt.jpg" alt="Avatar" class="rounded-full w-24 h-24 object-cover">
+  <h1 class="mt-3 text-2xl font-bold text-white">DAT KOY TRADING</h1>
+  <p class="text-white text-center mt-2 text-sm">
+    CHƯA CÓ SÀN GIAO DỊCH UY TÍN THÌ THAM KHẢO 2 SÀN PHÍA DƯỚI MÀ EM ĐẠT ĐANG CHƠI CỰC KÌ UY TÍN NHA ANH CHỊ
+  </p>
+</div>
+
+<!-- Danh sách link -->
+<div class="mt-6 flex flex-col space-y-3 w-full max-w-sm">
+    <a href="https://one.exnesstrack.org/a/k3lf7khn7u" class="bg-white rounded-2xl p-3 pl-14 flex items-center text-red-600 font-bold shadow relative"
+    >
+    <img src="https://extrading-vn.com/wp-content/uploads/2024/06/exness-logo.webp" class="w-8 h-8 absolute left-3" alt="Exness"> 
+    LINK ĐĂNG KÝ SÀN EXNESS EM ĐANG CHƠI Ạ (MÃ ĐỐI TÁC: k3lf7khn7u)
+  </a>
+
+  <a href="https://dbgvn.com/account/register?shareUserSetId=02b856a1954d400e8" class="bg-white rounded-2xl p-3 pl-14 flex items-center text-red-600 font-bold shadow relative">
+    <img src="data:image/png;base64,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" class="w-8 h-8 absolute left-3" alt="DBG Market"> 
+    LINK SÀN UY TÍN EM ĐANG GIAO DỊCH DBG MARKET
+  </a>
+
+<a href="https://attlas.io/r/21432173" class="bg-white rounded-2xl p-3 pl-14 flex items-center text-red-600 font-bold shadow relative">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOAAAADgCAMAAAAt85rTAAAAkFBMVEX///9oRufp5vtbMuVZL+VmQ+dkQOdfOebFvPX5+P6NeOxdNeZlQudeN+ZwUehaMeXLwvbi3fpzVenu6/z08v1tTeiKc+zQyPfX0Ph4XOn7+v65rfOGbuuhkO+7sPOtnvGUgO2Qe+2kk+/DuPWBZ+uqmvCbiO5PG+Tf2frm4fvUzfh7X+q2qvOZhu5WKOXa1fgkWvXsAAAF30lEQVR4nO2a2XKjMBBFkVkdcIi3OHYWe2Jnm3GS//+7AexAtywBElA1NXVP5QmI5KtWL2pwHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgP2Yxmjc9Mh+Zsfn5x3F1bb5pHHvRn6iKxVWYusuo7pFo5prx9l7+79I7X0vd4FEh8V6Qfxv1rs5xPuJACOF7j/pHXjxfmBFPy3+eptXlcDmWx/7lVmNPngbQ58yS0+jeSvfEb89QHhPoPIfV9eBWGvsprm4msyH0RT8z+NrhH4JOAh2f2N/ds6FHxLzCnToDsCxnj3UmFKYbVBK4oipCFs/+JOROjZPYE03KCbQmNDcgF+jckhGCA7mxrWYXfjCEPueabp+bgQTOQ3rrWF6n8Uek2hjQhYj4uPA0PmAj8J2NcD+h98pcQFf3Ivz0w5JMkRw0D1kI9KTKYUZ8LVmfL9LwKiaD5PiIraxuj5gLTP5IQ3ywOPNSXLtzqb77IfQxA/rXjrO560egd1EXPVJrnXwhobtnfTltDzAPDLMy4kYZyUwFBt72chCaa/xlduGTSk4HSYHMyUWc1YmHVBFIN1+eEcHVt2IumgyLPXpH6qNhUiA3YPCchW1PX850pkqG55KsijEDpUDmgSLN4t4uELEmF3ZnUepJP7IaOwuas5/5h0mBPIQGv7KfkJ5CzUD8JMNJlumfvq6qPB9cDTMh98DMb7b5GrczYSSuS5a7lhOui2SYp5BRLNzoPGGmuPG4bQXzQD8P00Wga+eF0cQvaW2A6VexlPOT1HhxljxQCuRnhEm2nvvTFmplwoie8VrvsDysxPuz5fKqezQZLAVyD/QTp/T5Via0E7jJ4uVD3kM4rWSWeI/xUCmQe2B4JJVTGxPaCXRWXriopvayqvsQD5MCuQeKfNoyT7UJpJYCnUNE8l++OeehptXWFZYDg88isP3QwoS2ArOF/K5KmnBbXBkCbkAvy7yPVcXZwgttBTo8uOlOoN1hBiwOgrSibjahvcBXWmMXVfcQsBBaHARZe6t5XmuB37wFeT4a9g4LoUVQYQKbTWgrcLOUOnTue/M/mSOF0KKSSJjmJi+0Fcg26HCblDc6T4F6y6ZuMqF1HhQy4WsnKepfxzwwPwhmzNnFplxoJ3AcKFrIqbJN0gnmgcVBMGfHOhMNJrQTeKVqfvhJ36mee2D5895ZmGkwoZXAiLbRyP/vuqhRwAOZWzZQ1ux6vQltBC6YE9Cf0G8XgRvQrw4rN/xGbSC1EXjQdufCXus1bsCQvM4S7U1oIfCJrR8jP0P1BjegoP2sI8sUtRnKXCCvJKQ3cvG+eYC28BAa0hbtmP+GOhOaC6RvAvPGDN+vYW9tGcmA/JXHK5u1zguNBfI6wk+klBHILzOs4XsjPwgSRrzQqDGhqcCptDlWzkJa6WPzIG3gRczFW/EHto9qcqGpQO4YxbvAe+mn9PMFCZ/o4o3gb76sehMaCnzkNXZaOMaae2UvzTXJAy/fCPIF0HuhmcA7vkHPjVBp2/ZyNOQ5UJEI9nyptSY0E8hrbPUbXiG87kdDyYChoqXMn9Ca0EjgJ08JVSM0aFpvU/gGFOHFd1WO89LOhCYCV9JWrBqhK1d3xw65iHlWPMOPhdpAaiBQOgT6gtyTzk9ex6OhZEBPGZilOTUmNBB4K21QGtjmkkeITkdD2YDq3/XOt43GC5nAXd2se7du1ie+YfK3lPZIDS1dq2Am1cFKE1KBtR9BzqUuUyqdjGYJv93haCgVMYHusx/p40m1FxKB9ftKOgS68mJIybDL0ZD3QsOldqStx1ZVacJKYFD7+uvI3CJJL1toe49X3dZfdO3fyBfHaaL4kqXk++CRZz2/ZrQ0fK076Ezf0uJb5vwvG2mt+m56epuyj6Ft3/eOKWaPK25v2o20aTfruN1jAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/nn+AqIRSECny6xGAAAAAElFTkSuQmCC" class="w-8 h-8 absolute left-3" alt="DBG Market"> 
+    LINK ĐĂNG KÍ SÀN TRADE COIN FUTURE ATX CỦA VIỆT NAM
+  </a>
+
+    <a href="https://zalo.me/g/lxlqqr620" class="bg-white rounded-2xl p-3 pl-14 flex items-center text-red-600 font-bold shadow relative"
+     onclick="return openInBrowser(event, '//zalo.me/g/lxlqqr620')">
+    <img src="https://vectordohoa.com/wp-content/uploads/2023/09/logo-zalo-vector-mau-003-300x300.jpg" class="w-8 h-8 absolute left-3" alt="Telegram"> 
+    Nhóm Tín Hiệu Free ZALO Cho Anh Chị Tham Khảo Ạ
+  </a>
+
+  <a href="https://zalo.me/0775823697" class="bg-white rounded-2xl p-3 pl-14 flex items-center text-red-600 font-bold shadow relative"
+   onclick="return openInBrowser(event, 'https://zalo.me/0775823697')">
+    <img src="https://vectordohoa.com/wp-content/uploads/2023/09/logo-zalo-vector-mau-003-300x300.jpg" class="w-8 h-8 absolute left-3" alt="Zalo"> 
+    ZALO CÁ NHÂN CỦA ADMIN (0775823697)
+  </a>
+
+
+   <a href="https://t.me/thanhdatpro09" class="bg-white rounded-2xl p-3 pl-14 flex items-center text-red-600 font-bold shadow relative">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/1200px-Telegram_logo.svg.png" class="w-8 h-8 absolute left-3" alt="IUX"> 
+        Telegram cá nhân của admin
+  </a>
+
+   <a href="https://anotepad.com/notes/atkkag6d" class="bg-white rounded-2xl p-3 pl-14 flex items-center text-red-600 font-bold shadow relative">
+    <img src="https://yt3.googleusercontent.com/iDJIvnRbSQb3JySvzN2CYQXcQ7hH_bdCP36PQ0rUs_9NGHI9IB9OCU2aWbMeDMOqzMF6FVHJTw=s900-c-k-c0x00ffffff-no-rj" class="w-8 h-8 absolute left-3" alt="IUX"> 
+        Cách chuyển đối tác exness sang em đạt
+  </a>
+
+</div>
+
+<!-- Nút dưới cùng giống trong ảnh -->
+
+</body>
+</html>
